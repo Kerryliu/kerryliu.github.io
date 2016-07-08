@@ -13,6 +13,7 @@
 	<script src="https://kerryliu.com/misc/jquery-1.11.3.min.js"></script>
 	<script src="https://kerryliu.com/misc/bootstrap.min.js"></script>
 	<script src="https://kerryliu.com/misc/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="https://kerryliu.com/misc/typed.min.js"></script>
 
 	<link rel="stylesheet" href="https://kerryliu.com/misc/bootstrap.min.css">
   <link rel="stylesheet" href="https://kerryliu.com/misc/font-awesome.min.css">
@@ -49,7 +50,7 @@
 
 					<a class="navbar-brand page-scroll" href="https://kerryliu.com/#page-top">
 						<div>
-								<img src="https://kerryliu.com/misc/black-lab-glass.ico" alt="">
+								<img src="https://kerryliu.com/img/black-lab-glass.ico" alt="">
 							{ Kerry Liu }
 						</div>
 					</a>
@@ -62,10 +63,7 @@
 							<a class="page-scroll" href="https://kerryliu.com/#about"> About </a>
 						</li>
 						<li>
-							<a class="page-scroll" href="https://kerryliu.com/#latest-post"> Blog </a>
-						</li>
-						<li>
-							<a class="page-scroll" href="https://kerryliu.com/#timeline"> Timeline </a>
+							<a class="page-scroll" href="https://kerryliu.com/#posts"> Blog </a>
 						</li>
 						<li>
 							<a class="page-scroll" href="https://kerryliu.com/#contact"> Contact </a>
@@ -98,10 +96,105 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<h2 id="about">About</h2>
-
-	<p>Hello and welcome to my website.  The website is currently in construction and will hopefully have a lot more content in the coming weeks.  Good things will happen soon~</p>
-
+					<p>Hello and welcome to my website.  The website is currently in construction and will hopefully have a lot more content in the coming weeks.  Good things will happen soon~</p>
 			</div>
 		</div>
 	</section>
+
+	<section id="latest-post" class="container content-section text-center">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<h2 id="posts">Posts</h2>
+					<h4>
+						<strong>Welcome to my website!</a> </strong>
+					</h4>
+					<p>This is the first post of my new website~</p>
+				</div>
+			</div>
+	</section>
+
+
+	<section id="contact" class="container content-section text-center">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h2 id="contact">Contact</h2>
+				<p>Drop me an email if you are interested in me coding for you or saving your neighborhood!</p>
+					<p>
+						<script>
+							function join_at_email(user, domain){
+								return (user && domain)?(user + "@" + domain):"";
+							}
+							document.write('<a href="mailto:'
+							+ join_at_email( "kerry_liu", "outlook.com" )
+							+ '">'
+							+ join_at_email( "kerry_liu", "outlook.com" )
+							+ '</a>');
+					</script><a href="mailto:kerry_liu@outlook.com">kerry_liu@outlook.com</a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<ul class="list-inline social-buttons">
+			<li><a href="https://github.com/kerryliu" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
+			<li><a href="https://kerryliu.com/feed.xml" target="_blank"><i class="fa fa-rss fa-fw"></i></a></li>
+		</ul>
+		<p><br><br></p>
+		<div class="container text-center">
+			<p>Copyright © Kerry Liu 2016</p>
+		</div>
+	</footer>
+
+	<p><br><br><br><br><br><br></p>
+
+	<script>
+		function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
+		$(document).ready(toggleNavCollapse);
+		$(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});
+	</script>
+
+  <script>
+  $(function(){$(".navbar-brand").click(function(){$(".collapse.in")&&$(".collapse.in").animate({height:"1px"},500,function(){$(".collapse.in").removeClass("in")})})});
+  </script>
+
+  <script type="text/javascript">
+  var myQuotes =  new Array();
+    myQuotes.push("The lower you fall, the higher you'll fly.");
+    myQuotes.push("The closer you get to the light, the greater your shadow becomes.");
+    myQuotes.push("A society grows great when old men plant trees whose shade they know they shall never sit in.");
+    myQuotes.push("A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.");
+    myQuotes.push("Years of love have been forgot, in the hatred of a minute.");
+    myQuotes.push("You should enjoy the little detours. To the fullest. Because that’s where you’ll find the things more important that what you want.");
+
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex ;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+    shuffle(myQuotes)
+    $(".intro-text").typed({
+      strings: myQuotes,
+      typeSpeed: 10,
+      backDelay: 5000,
+      startDelay: 200,
+      loop: true,
+      loopCount: false,
+      cursorChar: "|"
+    });
+  </script>
 </html>
