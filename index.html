@@ -148,7 +148,14 @@
 <script>
 	function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
 	$(document).ready(toggleNavCollapse);
-	$(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});
+	$(window).scroll(toggleNavCollapse);
+	$(document).on('click', 'a', function(event){
+			event.preventDefault();
+
+			$('html, body').animate({
+					scrollTop: $( $.attr(this, 'href') ).offset().top
+			}, 500);
+	});
 </script>
 
   <script>
