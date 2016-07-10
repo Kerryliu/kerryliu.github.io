@@ -166,6 +166,11 @@ a:hover,a:focus {
 	animation: fadein 0.5s;
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
