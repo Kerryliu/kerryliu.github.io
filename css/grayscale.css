@@ -52,6 +52,7 @@ div {
   -ms-user-select: text;
   -o-user-select: text;
   user-select: text;
+	animation: fadein 1.5s;
 }
 
 a {
@@ -163,7 +164,6 @@ a:hover,a:focus {
   background-size: cover;
   -o-background-size: cover;
 
-	animation: fadein 1.5s;
 }
 
 @keyframes fadein {
@@ -251,7 +251,6 @@ a:hover,a:focus {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  border: 1px solid #fff;
 }
 
 .content-section ul,.content-section ol {
