@@ -163,7 +163,7 @@ a:hover,a:focus {
   background-size: cover;
   -o-background-size: cover;
 
-	animation: fadein 0.5s;
+	animation: fadein 1.5s;
 }
 
 @keyframes fadein {
