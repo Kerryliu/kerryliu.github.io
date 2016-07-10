@@ -52,7 +52,6 @@ div {
   -ms-user-select: text;
   -o-user-select: text;
   user-select: text;
-	animation: fadein 1.5s;
 }
 
 a {
@@ -163,11 +162,6 @@ a:hover,a:focus {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
 }
 
 .intro .intro-body {
